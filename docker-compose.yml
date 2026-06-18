@@ -1,0 +1,12 @@
+services:
+  oracle:
+    image: gvenzl/oracle-xe:11.2.0.2-full
+    container_name: oracle-xe11
+    ports:
+      - "1521:1521"
+    volumes:
+      - oracle-volume:/u01/app/oracle/oradata
+    environment:
+      - ORACLE_PASSWORD=password
+volumes:
+  oracle-volume:
