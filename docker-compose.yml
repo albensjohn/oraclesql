@@ -2,6 +2,7 @@ services:
   oracle:
     image: gvenzl/oracle-xe:11.2.0.2-full
     container_name: oracle-xe11
+    restart: unless-stopped
     ports:
       - "1521:1521"
     volumes:
